@@ -1,7 +1,7 @@
 steps:
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'gcr.io/pathwaytips-org/pathwaytips-org:$SHORT_SHA', '.']
+  args: ['build', '-t', 'gcr.io/optimal-moon-374403/siva-velusamy-kgm:$SHORT_SHA', '.']
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['push', 'gcr.io/pathwaytips-org/pathwaytips-org:$SHORT_SHA']
+  args: ['push', 'gcr.io/optimal-moon-374403/siva-velusamy-kgm:$SHORT_SHA']
 - name: 'gcr.io/cloud-builders/gcloud'
-  args: ['beta', 'run', 'deploy', 'pathwaytips-org', '--region=us-central1', '--platform=managed', '--image=gcr.io/pathwaytips-org/pathwaytips-org:$SHORT_SHA']
+  args: ['beta', 'run', 'deploy', 'siva-velusamy-kgm', '--region=us-central1', '--platform=managed', '--image=gcr.io/optimal-moon-374403/siva-velusamy-kgm:$SHORT_SHA']
